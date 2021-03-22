@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { NewsController } from '../Controllers/app.controller';
-import { NewsService } from '../Services/app.service';
+import { NewsController } from '../Controllers/news.controller';
+import { NewsService } from '../Services/news.service';
 
 @Module({
   imports: [],
