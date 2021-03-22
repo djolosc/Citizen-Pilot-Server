@@ -1,12 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { NewsService } from './app.service';
+import { NewsService } from '../Services/app.service';
 import { NewsDto } from '../dto';
+
 @Controller('news')
 export class NewsController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly newsService: NewsService) {}
 
   @Get()
   findAllNews(): NewsDto[] {
-    return this.appService.getAllNews();
+    return this.newsService.getAllNews();
   }
 }
